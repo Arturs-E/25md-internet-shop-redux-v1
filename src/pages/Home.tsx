@@ -1,10 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useAppSelector } from '../redux/hooks/hooks';
+import { RootState } from '../redux/store/store';
 
-const Home = () => (
-  <>
-    <h1>Home</h1>
-  </>
-);
+const Home = () => {
+  const activeLanguage = useAppSelector((state: RootState) => state.language.value);
+  return (
+    <>
+      <h1>
+        {activeLanguage === 'en' && 'Home'}
+        {activeLanguage === 'lv' && 'Sākums'}
+      </h1>
+    </>
+  );
+};
 
 export default Home;

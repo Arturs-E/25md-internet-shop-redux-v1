@@ -9,7 +9,7 @@ const initialState: SelectLanguage = {
 };
 
 export const selectLanguageSlice = createSlice({
-  name: 'selectLanguage',
+  name: 'language',
   initialState,
   reducers: {
     changeLanguage: (state) => (state.value === 'en' ? { value: 'lv' } : { value: 'en' }),
@@ -17,3 +17,5 @@ export const selectLanguageSlice = createSlice({
 });
 
 export const { changeLanguage } = selectLanguageSlice.actions;
+
+export default selectLanguageSlice.reducer;
