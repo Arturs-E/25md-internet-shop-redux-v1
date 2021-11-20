@@ -3,17 +3,29 @@
   &__product-card {
     display: grid;
     grid-template-columns: 1fr;
-    row-gap: 30px;
-    border: 1px solid #818181;
+    border: 1px solid transparent;
     border-radius: 4px;
-    box-shadow: rgba(65, 65, 65, 0.24) 0px 3px 8px;
-    padding: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
 
   &__product-card-image {
     max-width: 100%;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
+  }
+
+  &__product-card-info-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+    padding: 6px;
+  }
+
+  &__product-card-name-price-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 5px;
+    justify-items: center;
   }
 
   &__product-card-add-to-cart-wrapper {

@@ -3,6 +3,7 @@ import './ProductCard.scss';
 import { useAppDispatch, useAppSelector } from '../../redux/hooks/hooks';
 import { RootState } from '../../redux/store/store';
 import { addToCart } from '../ShoppingCart/shoppingCartSlice';
+import ChangeQuantityButtons from '../ChangeQuantityButtons/ChangeQuantityButtons';
 
 interface ProductCardProps {
   imgUrl: string;
@@ -21,6 +22,10 @@ const ProductCard:FC<ProductCardProps> = ({ imgUrl, productName, price }) => {
     }
   };
 
+  const increaseQuantity = () => {
+    setCounter(counter + 1);
+  };
+
   const addProductToCart = () => {
     dispatch(addToCart({ productName, quantity: counter, pricePerUnit: price }));
   };
@@ -28,17 +33,25 @@ const ProductCard:FC<ProductCardProps> = ({ imgUrl, productName, price }) => {
   return (
     <div className="products__product-card">
       <img src={imgUrl} alt={productName} className="products__product-card-image" />
-      <h5>{productName}</h5>
-      <span>{price}</span>
-      <div className="products__product-card-add-to-cart-wrapper">
-        <div>
-          <button onClick={decreaseQuantity}>-</button>
-          <span>{counter}</span>
-          <button onClick={() => setCounter(counter + 1)}>+</button>
+      <div className="products__product-card-info-wrapper">
+        <div className="products__product-card-name-price-wrapper">
+          <h5>{productName}</h5>
+          <span>
+            {
+            activeLanguage === 'en' ? `Price: ${price.toFixed(2)} EUR` : `Cena: ${price.toFixed(2)} EUR`
+          }
+          </span>
         </div>
-        <button onClick={addProductToCart}>
-          {activeLanguage === 'en' ? 'Add' : 'Pievienot'}
-        </button>
+        <div className="products__product-card-add-to-cart-wrapper">
+          <ChangeQuantityButtons
+            decreaseQuantity={decreaseQuantity}
+            quantity={counter}
+            increaseQuantity={increaseQuantity}
+          />
+          <button onClick={addProductToCart}>
+            {activeLanguage === 'en' ? 'Add' : 'Pievienot'}
+          </button>
+        </div>
       </div>
     </div>
   );
