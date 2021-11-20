@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { FC } from 'react';
 import './Header.scss';
 import { Link } from 'react-router-dom';
 import { changeLanguage } from '../SelectLanguage/selectLanguageSlice';
 import { useAppDispatch, useAppSelector } from '../../redux/hooks/hooks';
 import { RootState } from '../../redux/store/store';
 
-const Header = () => {
+const Header:FC = () => {
   const dispatch = useAppDispatch();
   const activeLanguage = useAppSelector((state: RootState) => state.language.value);
 
@@ -16,7 +16,7 @@ const Header = () => {
           <img src="./assets/logo/Leica_Geosystems_Logo.svg" alt="Leica Geosystems logo" className="logo" />
         </Link>
       </nav>
-      <select onChange={() => dispatch(changeLanguage())}>
+      <select name="language" onChange={() => dispatch(changeLanguage())}>
         <option value="en">EN</option>
         <option value="lv">LV</option>
       </select>
