@@ -16,7 +16,7 @@ const ProductCard:FC<ProductCardProps> = ({ imgUrl, productName, price }) => {
   const activeLanguage = useAppSelector((state: RootState) => state.language.value);
 
   const decreaseQuantity = () => {
-    if (counter > 0) {
+    if (counter > 1) {
       setCounter(counter - 1);
     }
   };
