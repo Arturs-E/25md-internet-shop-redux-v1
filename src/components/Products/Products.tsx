@@ -6,13 +6,20 @@ import ProductCard from '../ProductCard/ProductCard';
 
 const Products:FC = () => {
   const products = useAppSelector((state: RootState) => state.products);
+  const activeLanguage = useAppSelector((state: RootState) => state.language.value);
+
   return (
     <section className="products">
-      {
-        products.map(({ imgUrl, productName, price }) => (
-          <ProductCard key={productName} imgUrl={imgUrl} productName={productName} price={price} />
-        ))
-      }
+      <div className="products__product-card-wrapper">
+        {
+          products.map(({ imgUrl, productName, price }) => (
+            <ProductCard key={productName} imgUrl={imgUrl} productName={productName} price={price} />
+          ))
+        }
+      </div>
+      <button>
+        {activeLanguage === 'en' ? 'Load more' : 'Ielādēt vēl'}
+      </button>
     </section>
   );
 };

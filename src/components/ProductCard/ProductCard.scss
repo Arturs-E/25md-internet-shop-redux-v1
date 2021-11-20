@@ -1,0 +1,25 @@
+.products {
+
+  &__product-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+    border: 1px solid #818181;
+    border-radius: 4px;
+    box-shadow: rgba(65, 65, 65, 0.24) 0px 3px 8px;
+    padding: 5px;
+  }
+
+  &__product-card-image {
+    max-width: 100%;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+
+  &__product-card-add-to-cart-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+
