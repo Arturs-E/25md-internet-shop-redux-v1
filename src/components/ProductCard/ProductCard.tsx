@@ -1,5 +1,8 @@
 import React, { FC, useState } from 'react';
 import './ProductCard.scss';
+import { useAppDispatch, useAppSelector } from '../../redux/hooks/hooks';
+import { RootState } from '../../redux/store/store';
+import { addToCart } from '../ShoppingCart/shoppingCartSlice';
 
 interface ProductCardProps {
   imgUrl: string;
@@ -9,11 +12,17 @@ interface ProductCardProps {
 
 const ProductCard:FC<ProductCardProps> = ({ imgUrl, productName, price }) => {
   const [counter, setCounter] = useState(1);
+  const dispatch = useAppDispatch();
+  const activeLanguage = useAppSelector((state: RootState) => state.language.value);
 
   const decreaseQuantity = () => {
     if (counter > 0) {
       setCounter(counter - 1);
     }
+  };
+
+  const addProductToCart = () => {
+    dispatch(addToCart({ productName, quantity: counter, pricePerUnit: price }));
   };
 
   return (
@@ -27,7 +36,9 @@ const ProductCard:FC<ProductCardProps> = ({ imgUrl, productName, price }) => {
           <span>{counter}</span>
           <button onClick={() => setCounter(counter + 1)}>+</button>
         </div>
-        <button>Add</button>
+        <button onClick={addProductToCart}>
+          {activeLanguage === 'en' ? 'Add' : 'Pievienot'}
+        </button>
       </div>
     </div>
   );

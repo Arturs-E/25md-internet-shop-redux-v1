@@ -16,9 +16,9 @@ const shoppingCartSlice = createSlice({
   },
 });
 
-const { addToCart } = shoppingCartSlice.actions;
+export const { addToCart } = shoppingCartSlice.actions;
 
 const shoppingCartSliceReducer = shoppingCartSlice.reducer;
 
-export { shoppingCartSlice, addToCart, shoppingCartSliceReducer };
+export { shoppingCartSlice, shoppingCartSliceReducer };
 export type { ShoppingCart };
