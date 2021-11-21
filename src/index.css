@@ -5,6 +5,12 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
-  line-height: 1.2;
-  font-size: 16px;
+}
+
+body {
+  color: #333;
+}
+
+h4 {
+  font-size: 1.1rem;
 }

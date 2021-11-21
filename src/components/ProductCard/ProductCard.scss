@@ -28,9 +28,14 @@
     justify-items: center;
   }
 
+  &__product-card-price {
+    font-size: 14px;
+  }
+
   &__product-card-add-to-cart-wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 }
 

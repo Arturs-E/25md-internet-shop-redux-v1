@@ -1,0 +1,25 @@
+.header__shopping-cart-icon-wrapper {
+  position: relative;
+}
+
+.header__shopping-cart-icon {
+  font-size: 22px;
+  color: #333;
+}
+
+.header__shopping-cart-icon-quantity {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  color: #fff;
+  background-color: #fa0029;
+  line-height: 1;
+  font-size: 14px;
+}

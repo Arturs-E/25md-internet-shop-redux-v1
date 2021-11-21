@@ -4,6 +4,8 @@ import { useAppDispatch, useAppSelector } from '../../redux/hooks/hooks';
 import { RootState } from '../../redux/store/store';
 import { addToCart } from '../ShoppingCart/shoppingCartSlice';
 import ChangeQuantityButtons from '../ChangeQuantityButtons/ChangeQuantityButtons';
+import Button from '../Button/Button';
+import { increaseCartProductCount } from '../ShoppingCartIcon/shoppingCartIconSlice';
 
 interface ProductCardProps {
   imgUrl: string;
@@ -28,6 +30,7 @@ const ProductCard:FC<ProductCardProps> = ({ imgUrl, productName, price }) => {
 
   const addProductToCart = () => {
     dispatch(addToCart({ productName, quantity: counter, pricePerUnit: price }));
+    dispatch(increaseCartProductCount());
   };
 
   return (
@@ -35,8 +38,8 @@ const ProductCard:FC<ProductCardProps> = ({ imgUrl, productName, price }) => {
       <img src={imgUrl} alt={productName} className="products__product-card-image" />
       <div className="products__product-card-info-wrapper">
         <div className="products__product-card-name-price-wrapper">
-          <h5>{productName}</h5>
-          <span>
+          <h4>{productName}</h4>
+          <span className="products__product-card-price">
             {
             activeLanguage === 'en' ? `Price: ${price.toFixed(2)} EUR` : `Cena: ${price.toFixed(2)} EUR`
           }
@@ -48,9 +51,11 @@ const ProductCard:FC<ProductCardProps> = ({ imgUrl, productName, price }) => {
             quantity={counter}
             increaseQuantity={increaseQuantity}
           />
-          <button onClick={addProductToCart}>
-            {activeLanguage === 'en' ? 'Add' : 'Pievienot'}
-          </button>
+          <Button
+            title={activeLanguage === 'en' ? 'Add' : 'Pievienot'}
+            clickHandler={addProductToCart}
+            additionalClasses="button--add-to-cart"
+          />
         </div>
       </div>
     </div>

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { changeLanguage } from '../SelectLanguage/selectLanguageSlice';
 import { useAppDispatch, useAppSelector } from '../../redux/hooks/hooks';
 import { RootState } from '../../redux/store/store';
+import ShoppingCartIcon from '../ShoppingCartIcon/ShoppingCartIcon';
 
 const Header:FC = () => {
   const dispatch = useAppDispatch();
@@ -22,8 +23,9 @@ const Header:FC = () => {
       </select>
       <nav>
         <Link to="/cart">
-          {activeLanguage === 'en' && 'Cart'}
-          {activeLanguage === 'lv' && 'Grozs'}
+          {/* {activeLanguage === 'en' && 'Cart'} */}
+          {/* {activeLanguage === 'lv' && 'Grozs'} */}
+          <ShoppingCartIcon />
         </Link>
       </nav>
     </div>
