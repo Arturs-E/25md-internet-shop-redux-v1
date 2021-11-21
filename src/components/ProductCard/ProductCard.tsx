@@ -17,6 +17,7 @@ const ProductCard:FC<ProductCardProps> = ({ imgUrl, productName, price }) => {
   const [counter, setCounter] = useState(1);
   const dispatch = useAppDispatch();
   const activeLanguage = useAppSelector((state: RootState) => state.language.value);
+  const shoppingCartProducts = useAppSelector((state) => state.shoppingCartItems);
 
   const decreaseQuantity = () => {
     if (counter > 1) {
@@ -32,7 +33,9 @@ const ProductCard:FC<ProductCardProps> = ({ imgUrl, productName, price }) => {
     dispatch(addToCart({
       productName, quantity: counter, pricePerUnit: price, imgUrl,
     }));
-    dispatch(increaseCartProductCount());
+    if (!shoppingCartProducts.some((item) => item.productName === productName)) {
+      dispatch(increaseCartProductCount());
+    }
   };
 
   return (

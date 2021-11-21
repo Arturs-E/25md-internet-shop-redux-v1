@@ -13,6 +13,9 @@
   grid-template-columns: 1fr;
   row-gap: 18px;
 
-  &__list-wrapper {
+  &__total-sum {
+    place-self: end;
+    font-size: 22px;
+    font-weight: bold;
   }
 }
