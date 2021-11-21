@@ -3,9 +3,9 @@ import products from '../../data/ProductData';
 
 export const productsSlice = createSlice({
   name: 'products',
-  initialState: products,
+  initialState: products.slice(0, 3),
   reducers: {
-    loadMore: (state) => state,
+    loadMore: (state) => products.slice(0, state.length + 3),
   },
 });
 

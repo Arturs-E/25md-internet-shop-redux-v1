@@ -14,7 +14,7 @@ const ShoppingCart = () => {
 
   return (
     <section className="shopping-cart">
-      <h1>{activeLanguage === 'en' ? 'Shopping Cart' : 'Pirkumu grozs'}</h1>
+      <h1 className="heading1">{activeLanguage === 'en' ? 'Shopping Cart' : 'Pirkumu grozs'}</h1>
       <div className="shopping-cart__list-wrapper">
         {
           cartItems.map(({

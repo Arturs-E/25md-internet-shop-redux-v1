@@ -6,13 +6,13 @@ import Products from '../components/Products/Products';
 const Home = () => {
   const activeLanguage = useAppSelector((state: RootState) => state.language.value);
   return (
-    <>
-      <h1>
+    <section className="home">
+      <h1 className="heading1">
         {activeLanguage === 'en' && 'Home'}
-        {activeLanguage === 'lv' && 'Sākums'}
+        {activeLanguage === 'lv' && 'Produkti'}
       </h1>
       <Products />
-    </>
+    </section>
   );
 };
 

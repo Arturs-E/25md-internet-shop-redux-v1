@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface ShoppingCartIcon {
   count: number;
@@ -12,12 +12,13 @@ const shoppingCartIconSlice = createSlice({
   name: 'shoppingCartIconProductCount',
   initialState,
   reducers: {
-    increaseCartProductCount: (state) => ({ count: state.count + 1 }),
+    increaseCartProductCount: (state, action: PayloadAction<number>) => ({ count: action.payload + 1 }),
+    decreaseCartProductCount: (state, action: PayloadAction<number>) => ({ count: action.payload - 1 }),
   },
 });
 
-const { increaseCartProductCount } = shoppingCartIconSlice.actions;
+const { increaseCartProductCount, decreaseCartProductCount } = shoppingCartIconSlice.actions;
 
 const shoppingCartIconSliceReducer = shoppingCartIconSlice.reducer;
 
-export { increaseCartProductCount, shoppingCartIconSliceReducer };
+export { increaseCartProductCount, decreaseCartProductCount, shoppingCartIconSliceReducer };

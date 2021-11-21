@@ -21,4 +21,22 @@
       background-color: #e86d6d;
     }
   }
+
+  &--load-more{
+    place-self: center;
+    background-color: #fff;
+    border: 2px solid transparent;
+    border-bottom-color: #fa0029;
+    border-radius: 0;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #333;
+
+    &:hover {
+      background-color: #e86d6d;
+      color: #fff;
+      border-radius: 4px;
+      border: 2px solid transparent;
+    }
+  }
 }

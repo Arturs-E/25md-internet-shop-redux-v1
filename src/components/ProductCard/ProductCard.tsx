@@ -34,7 +34,7 @@ const ProductCard:FC<ProductCardProps> = ({ imgUrl, productName, price }) => {
       productName, quantity: counter, pricePerUnit: price, imgUrl,
     }));
     if (!shoppingCartProducts.some((item) => item.productName === productName)) {
-      dispatch(increaseCartProductCount());
+      dispatch(increaseCartProductCount(shoppingCartProducts.length));
     }
   };
 
@@ -43,7 +43,7 @@ const ProductCard:FC<ProductCardProps> = ({ imgUrl, productName, price }) => {
       <img src={imgUrl} alt={productName} className="products__product-card-image" />
       <div className="products__product-card-info-wrapper">
         <div className="products__product-card-name-price-wrapper">
-          <h4>{productName}</h4>
+          <h4 className="heading4">{productName}</h4>
           <span className="products__product-card-price">
             {
             activeLanguage === 'en' ? `Price: ${price.toFixed(2)} EUR` : `Cena: ${price.toFixed(2)} EUR`

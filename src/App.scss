@@ -8,14 +8,29 @@
   }
 }
 
+.home {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 18px;
+}
+
 .shopping-cart {
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 18px;
 
   &__total-sum {
+    margin-top: 10px;
     place-self: end;
     font-size: 22px;
     font-weight: bold;
   }
+}
+
+.heading1 {
+  text-align: center;
+}
+
+.heading4 {
+  font-size: 1.1rem;
 }

@@ -2,16 +2,17 @@
 
   &__item-wrapper {
     display: grid;
-    grid-template-columns: min-content 1fr max-content;
+    grid-template-columns: min-content 1fr max-content min-content;
     column-gap: 24px;
     align-items: center;
     align-content: stretch;
     padding: 5px;
-    border: 1px solid #818181;
+    //border: 1px solid #818181;
+    //border-bottom: 1px solid #818181;
   }
 
   &__item-wrapper:nth-child(n + 2) {
-    border-top: none;
+    border-top: 1px solid #818181;
   }
 
   &__item-image {
@@ -26,5 +27,21 @@
     align-items: center;
     row-gap: 4px;
     font-size: 12px;
+  }
+
+  &__quantity-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+
+  &__remove-item {
+    font-size: 22px;
+    padding: 3px;
+    cursor: pointer;
+
+    &:hover {
+      color: #fa0029;
+    }
   }
 }

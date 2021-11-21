@@ -42,14 +42,19 @@ const shoppingCartSlice = createSlice({
         return item;
       })
     ),
+    removeItem: (state, action: PayloadAction<string>) => (
+      state.filter((item) => item.productName !== action.payload)
+    ),
   },
 });
 
-const { addToCart, decreaseQuantity, increaseQuantity } = shoppingCartSlice.actions;
+const {
+  addToCart, decreaseQuantity, increaseQuantity, removeItem,
+} = shoppingCartSlice.actions;
 
 const shoppingCartSliceReducer = shoppingCartSlice.reducer;
 
 export {
-  addToCart, decreaseQuantity, increaseQuantity, shoppingCartSliceReducer,
+  addToCart, decreaseQuantity, increaseQuantity, removeItem, shoppingCartSliceReducer,
 };
 export type { ShoppingCartInterface };

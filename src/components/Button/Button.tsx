@@ -3,7 +3,7 @@ import './Button.scss';
 
 interface ButtonProps {
   title: string;
-  clickHandler: () => void;
+  clickHandler?: () => void;
   additionalClasses?: string;
 }
 
