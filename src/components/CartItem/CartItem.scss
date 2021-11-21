@@ -1,0 +1,30 @@
+.shopping-cart {
+
+  &__item-wrapper {
+    display: grid;
+    grid-template-columns: min-content 1fr max-content;
+    column-gap: 24px;
+    align-items: center;
+    align-content: stretch;
+    padding: 5px;
+    border: 1px solid #818181;
+  }
+
+  &__item-wrapper:nth-child(n + 2) {
+    border-top: none;
+  }
+
+  &__item-image {
+    max-width: 80px;
+  }
+
+  &__price-quantity-wrapper {
+    place-self: stretch;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: right;
+    align-items: center;
+    row-gap: 4px;
+    font-size: 12px;
+  }
+}

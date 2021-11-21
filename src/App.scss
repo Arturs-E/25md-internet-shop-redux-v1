@@ -7,3 +7,12 @@
     padding: 10px 20px 40px;
   }
 }
+
+.shopping-cart {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 18px;
+
+  &__list-wrapper {
+  }
+}

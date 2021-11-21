@@ -2,13 +2,11 @@ import React, { FC } from 'react';
 import './Header.scss';
 import { Link } from 'react-router-dom';
 import { changeLanguage } from '../SelectLanguage/selectLanguageSlice';
-import { useAppDispatch, useAppSelector } from '../../redux/hooks/hooks';
-import { RootState } from '../../redux/store/store';
+import { useAppDispatch } from '../../redux/hooks/hooks';
 import ShoppingCartIcon from '../ShoppingCartIcon/ShoppingCartIcon';
 
 const Header:FC = () => {
   const dispatch = useAppDispatch();
-  const activeLanguage = useAppSelector((state: RootState) => state.language.value);
 
   return (
     <div className="header">
@@ -23,8 +21,6 @@ const Header:FC = () => {
       </select>
       <nav>
         <Link to="/cart">
-          {/* {activeLanguage === 'en' && 'Cart'} */}
-          {/* {activeLanguage === 'lv' && 'Grozs'} */}
           <ShoppingCartIcon />
         </Link>
       </nav>

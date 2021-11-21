@@ -29,7 +29,9 @@ const ProductCard:FC<ProductCardProps> = ({ imgUrl, productName, price }) => {
   };
 
   const addProductToCart = () => {
-    dispatch(addToCart({ productName, quantity: counter, pricePerUnit: price }));
+    dispatch(addToCart({
+      productName, quantity: counter, pricePerUnit: price, imgUrl,
+    }));
     dispatch(increaseCartProductCount());
   };
 

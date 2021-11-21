@@ -9,7 +9,7 @@ const initialState: ShoppingCartIcon = {
 };
 
 const shoppingCartIconSlice = createSlice({
-  name: 'shoppingCartProductCount',
+  name: 'shoppingCartIconProductCount',
   initialState,
   reducers: {
     increaseCartProductCount: (state) => ({ count: state.count + 1 }),

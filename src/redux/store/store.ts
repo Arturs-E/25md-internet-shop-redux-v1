@@ -8,8 +8,8 @@ export const store = configureStore({
   reducer: {
     language: selectLanguageSliceReducer,
     products: productsSliceReducer,
-    shoppingCart: shoppingCartSliceReducer,
-    shoppingCartProductCount: shoppingCartIconSliceReducer,
+    shoppingCartItems: shoppingCartSliceReducer,
+    shoppingCartIconProductCount: shoppingCartIconSliceReducer,
   },
 });
 

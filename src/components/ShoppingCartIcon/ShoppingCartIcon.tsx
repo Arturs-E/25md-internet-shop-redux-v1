@@ -6,7 +6,7 @@ import { useAppSelector } from '../../redux/hooks/hooks';
 import { RootState } from '../../redux/store/store';
 
 const ShoppingCartIcon = () => {
-  const productCount = useAppSelector((state: RootState) => state.shoppingCartProductCount.count);
+  const productCount = useAppSelector((state: RootState) => state.shoppingCartIconProductCount.count);
   return (
     <div className="header__shopping-cart-icon-wrapper">
       <FontAwesomeIcon className="header__shopping-cart-icon" icon={faShoppingCart} />

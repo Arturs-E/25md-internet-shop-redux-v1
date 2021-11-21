@@ -5,16 +5,23 @@ import CartItem from '../components/CartItem/CartItem';
 
 const ShoppingCart = () => {
   const activeLanguage = useAppSelector((state: RootState) => state.language.value);
-  const cartItems = useAppSelector((state) => state.shoppingCart);
+  const cartItems = useAppSelector((state) => state.shoppingCartItems);
 
   return (
-    <>
+    <section className="shopping-cart">
       <h1>{activeLanguage === 'en' ? 'Shopping Cart' : 'Pirkumu grozs'}</h1>
-      {
-        cartItems.map(({ productName, quantity, pricePerUnit }) => (
-          <CartItem productName={productName} quantity={quantity} price={pricePerUnit} />))
-      }
-    </>
+      <div className="shopping-cart__list-wrapper">
+        {
+          cartItems.map(({
+            productName,
+            quantity,
+            pricePerUnit,
+            imgUrl,
+          }) => (
+            <CartItem productName={productName} quantity={quantity} price={pricePerUnit} imgUrl={imgUrl} />))
+        }
+      </div>
+    </section>
   );
 };
 
