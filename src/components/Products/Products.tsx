@@ -5,6 +5,7 @@ import { RootState } from '../../redux/store/store';
 import ProductCard from '../ProductCard/ProductCard';
 import Button from '../Button/Button';
 import { loadMore } from './productsSlice';
+import { productDataLength } from '../../data/ProductData';
 
 const Products:FC = () => {
   const products = useAppSelector((state: RootState) => state.products);
@@ -24,11 +25,15 @@ const Products:FC = () => {
           ))
         }
       </div>
-      <Button
-        title={activeLanguage === 'en' ? 'Load more' : 'Ielādēt vēl'}
-        clickHandler={loadMoreProducts}
-        additionalClasses="button--load-more"
-      />
+      {
+        products.length < productDataLength && (
+        <Button
+          title={activeLanguage === 'en' ? 'Load more' : 'Ielādēt vēl'}
+          clickHandler={loadMoreProducts}
+          additionalClasses="button--load-more"
+        />
+        )
+      }
     </section>
   );
 };

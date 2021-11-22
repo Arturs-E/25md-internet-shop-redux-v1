@@ -112,5 +112,7 @@ const products:ProductData[] = [
   },
 ];
 
-export default products;
+const productDataLength = products.length;
+
+export { products, productDataLength };
 export type { ProductData };

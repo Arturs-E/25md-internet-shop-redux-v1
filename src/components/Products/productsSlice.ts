@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import products from '../../data/ProductData';
+import { products } from '../../data/ProductData';
 
 export const productsSlice = createSlice({
   name: 'products',
