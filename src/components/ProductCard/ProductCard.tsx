@@ -40,7 +40,9 @@ const ProductCard:FC<ProductCardProps> = ({ imgUrl, productName, price }) => {
 
   return (
     <div className="products__product-card">
-      <img src={imgUrl} alt={productName} className="products__product-card-image" />
+      <div className="products__product-card-image-wrapper">
+        <img src={imgUrl} alt={productName} className="products__product-card-image" />
+      </div>
       <div className="products__product-card-info-wrapper">
         <div className="products__product-card-name-price-wrapper">
           <h4 className="heading4">{productName}</h4>

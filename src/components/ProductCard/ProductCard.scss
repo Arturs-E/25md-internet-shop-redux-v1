@@ -8,8 +8,17 @@
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
 
+  &__product-card-image-wrapper {
+    position: relative;
+    padding-top: 92.857%;
+  }
+
   &__product-card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
     max-width: 100%;
+    height: auto;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
   }

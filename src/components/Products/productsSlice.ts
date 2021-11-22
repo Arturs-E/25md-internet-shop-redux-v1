@@ -3,7 +3,7 @@ import products from '../../data/ProductData';
 
 export const productsSlice = createSlice({
   name: 'products',
-  initialState: products.slice(0, 3),
+  initialState: products.slice(0, 9),
   reducers: {
     loadMore: (state) => products.slice(0, state.length + 3),
   },
