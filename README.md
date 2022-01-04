@@ -1,5 +1,7 @@
 # Internet shop with React Redux and React Router
 
+You can view the project [HERE](https://arturs-e.github.io/25md-internet-shop-redux-v1/)
+
 ![Internet shop GIF](./Internet-shop-redux.gif)
 
 Task is to create an internet shop where you have at least 30 items taken from a

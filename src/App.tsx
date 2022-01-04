@@ -1,14 +1,15 @@
 import React from 'react';
 import './App.scss';
 import {
-  BrowserRouter, Routes, Route,
+  BrowserRouter, Routes, Route, HashRouter,
 } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Home from './pages/Home';
 import ShoppingCart from './pages/ShoppingCart';
 
 const App = () => (
-  <BrowserRouter>
+  // Use BrowserRouter for normal workflow
+  <HashRouter>
     <div className="internet-shop">
       <div className="internet-shop-wrapper">
         <Header />
@@ -18,7 +19,7 @@ const App = () => (
         </Routes>
       </div>
     </div>
-  </BrowserRouter>
+  </HashRouter>
 );
 
 export default App;
