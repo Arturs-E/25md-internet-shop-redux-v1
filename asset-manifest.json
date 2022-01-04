@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/25md-internet-shop-redux-v1/static/css/main.5f7778c3.chunk.css",
-    "main.js": "/25md-internet-shop-redux-v1/static/js/main.cd0fa14a.chunk.js",
-    "main.js.map": "/25md-internet-shop-redux-v1/static/js/main.cd0fa14a.chunk.js.map",
+    "main.js": "/25md-internet-shop-redux-v1/static/js/main.02489c03.chunk.js",
+    "main.js.map": "/25md-internet-shop-redux-v1/static/js/main.02489c03.chunk.js.map",
     "runtime-main.js": "/25md-internet-shop-redux-v1/static/js/runtime-main.8010b52c.js",
     "runtime-main.js.map": "/25md-internet-shop-redux-v1/static/js/runtime-main.8010b52c.js.map",
-    "static/js/2.f02ac10a.chunk.js": "/25md-internet-shop-redux-v1/static/js/2.f02ac10a.chunk.js",
-    "static/js/2.f02ac10a.chunk.js.map": "/25md-internet-shop-redux-v1/static/js/2.f02ac10a.chunk.js.map",
+    "static/js/2.18f85c01.chunk.js": "/25md-internet-shop-redux-v1/static/js/2.18f85c01.chunk.js",
+    "static/js/2.18f85c01.chunk.js.map": "/25md-internet-shop-redux-v1/static/js/2.18f85c01.chunk.js.map",
     "static/js/3.21888462.chunk.js": "/25md-internet-shop-redux-v1/static/js/3.21888462.chunk.js",
     "static/js/3.21888462.chunk.js.map": "/25md-internet-shop-redux-v1/static/js/3.21888462.chunk.js.map",
     "index.html": "/25md-internet-shop-redux-v1/index.html",
     "static/css/main.5f7778c3.chunk.css.map": "/25md-internet-shop-redux-v1/static/css/main.5f7778c3.chunk.css.map",
-    "static/js/2.f02ac10a.chunk.js.LICENSE.txt": "/25md-internet-shop-redux-v1/static/js/2.f02ac10a.chunk.js.LICENSE.txt"
+    "static/js/2.18f85c01.chunk.js.LICENSE.txt": "/25md-internet-shop-redux-v1/static/js/2.18f85c01.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.8010b52c.js",
-    "static/js/2.f02ac10a.chunk.js",
+    "static/js/2.18f85c01.chunk.js",
     "static/css/main.5f7778c3.chunk.css",
-    "static/js/main.cd0fa14a.chunk.js"
+    "static/js/main.02489c03.chunk.js"
   ]
 }
