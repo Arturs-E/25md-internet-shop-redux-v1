@@ -1,5 +1,7 @@
 # Internet shop with React Redux and React Router
 
+![Internet shop GIF](./Internet-shop-redux.gif)
+
 Task is to create an internet shop where you have at least 30 items taken from a
 separate file stored in an array. Each product should have an add to cart option with
 the ability to add several items. On page load you should show the first 9 items and,
