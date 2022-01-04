@@ -1,6 +1,6 @@
 {
-  "name": "react-boilerplate",
-  "homepage": "https://arturs-e.github.io/25md-internet-shop-redux-v1",
+  "name": "25md-internet-shop-redux-v1",
+  "homepage": "https://arturs-e.github.io/25md-internet-shop-redux-v1/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
