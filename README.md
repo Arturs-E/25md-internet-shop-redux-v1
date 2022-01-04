@@ -1,4 +1,19 @@
-# Getting Started with Create React App
+# Internet shop with React Redux and React Router
+
+Task is to create an internet shop where you have at least 30 items taken from a
+separate file stored in an array. Each product should have an add to cart option with
+the ability to add several items. On page load you should show the first 9 items and,
+if one wants to see more, “Load more” action is required.
+In the cart page (/cart) one should see a table of selected items. Each item should
+have the option to remove or increase the count.
+Application needs to have at least two language versions which can be changed with
+select within header.
+
+Full description [HERE](./React_Redux%20homework.pdf)
+
+---
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
